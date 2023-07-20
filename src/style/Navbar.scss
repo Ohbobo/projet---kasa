@@ -1,0 +1,26 @@
+@use "abstract" as *;
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+
+    .navbar__logo {
+        width: 150px;
+    }
+
+    .navbar_links {
+        display: flex;
+        gap: 30px;
+
+        a {
+            font-size: 24px;
+            color: $textColor;
+            font-family: 'Montserrat', sans-serif;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

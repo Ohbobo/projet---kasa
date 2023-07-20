@@ -1,0 +1,25 @@
+@use "abstract" as *;
+
+.error-container {
+    height: 60vh;
+    @include flex();
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 30px;
+
+    &__title{
+        font-size: 288px;
+        color: $textColor;
+    }
+
+    &__paragraphe {
+        font-size: 36px;
+        color: $textColor;
+    }
+
+    & a {
+        font-size: 18px;
+        color: $textColor;
+        text-decoration: underline;
+    }
+}
