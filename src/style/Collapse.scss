@@ -1,19 +1,30 @@
 @use "abstract" as *;
 
-.collapse-content {
+.collapse-container {
     width: 90%;
+}
+
+.collapse-content {
+    height: 52px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    background: $textColor;
 
     &__title {
-        width: 100%;
-        height: 52px;
-        display: flex;
-        justify-content: flex-start;
-        padding: 10px;
         font-size: 24px;
-        background: $textColor;
         color: white;
-        border-radius: 5px;
         border: none;
+    }
+
+    &__img {
+        transform: rotate(180deg);
+    }
+
+    &__img.active {
+        transform: rotate(360deg);
     }
 
     &__text {
