@@ -1,5 +1,6 @@
 import NavBar from "./components/Navbar"
 import Router from "./components/RouteManagement"
+import Footer from "./components/Footer"
 
 import "./style/Global.scss"
 

@@ -1,0 +1,25 @@
+@use "abstract" as *;
+
+.collapse-content {
+    width: 90%;
+
+    &__title {
+        width: 100%;
+        height: 52px;
+        display: flex;
+        justify-content: flex-start;
+        padding: 10px;
+        font-size: 24px;
+        background: $textColor;
+        color: white;
+        border-radius: 5px;
+        border: none;
+    }
+
+    &__text {
+        color: $textColor;
+        background: $grayColor;
+        padding: 15px;
+        border-radius: 5px;
+    }
+}

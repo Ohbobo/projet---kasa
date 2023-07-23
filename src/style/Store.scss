@@ -1,0 +1,14 @@
+@use "abstract" as *;
+
+.store-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+    height: 100%;
+    width: 100%;
+    background: $grayColor;
+    border-radius: 20px;
+    margin-top: 40px;
+    padding: 40px;
+}
