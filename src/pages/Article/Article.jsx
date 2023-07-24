@@ -1,10 +1,10 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-import Collapse from "../components/Collapse"
-import datas from "../data/data.json";
-import Error from "./Error";
+import Collapse from "../../components/Collapse/Collapse"
+import datas from "../../data/data.json";
+import Error from "../Error/Error";
 
-import "../style/Home.scss"
+import "./Article.scss"
 
 const Article = () => {
     const { id } = useParams();

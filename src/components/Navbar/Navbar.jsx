@@ -1,15 +1,17 @@
 import { Link } from "react-router-dom";
-import logo from "../assets/logo.png";
+import { useState } from "react";
+import logo from "../../assets/logo.png";
 
-import "../style/Navbar.scss"
+import "./Navbar.scss"
+
 
 function NavBar() {
 
-
     return (
         <div className="navbar">
-            <Link><img src={logo} className="navbar__logo" alt="Logo kasa" /></Link>
+            <Link to="/"><img src={logo} className="navbar__logo" alt="Logo kasa" /></Link>
             <div className="navbar_links">
+
                 <Link to="/">Accueil</Link>
                 <Link to="/about">A propos</Link>
             </div>

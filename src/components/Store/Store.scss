@@ -1,12 +1,13 @@
-@use "abstract" as *;
+@use "../../style/abstract" as *;
 
 .store-container {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 40px;
+
+    gap: 70px;
     height: 100%;
-    width: 100%;
+    width: 1240px;
     background: $grayColor;
     border-radius: 20px;
     margin-top: 40px;

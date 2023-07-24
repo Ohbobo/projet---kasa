@@ -1,9 +1,10 @@
 import React from "react";
-import Collapse from "../components/Collapse";
-import aboutData from "../data/aboutData.json";
-import Banner from "../components/Banner";
-import "../style/About.scss"
-import aboutImage from "../assets/about.png"
+import Collapse from "../../components/Collapse/Collapse";
+import aboutData from "../../data/aboutData.json";
+import Banner from "../../components/Banner/Banner";
+import "./About.scss"
+
+import aboutImage from "../../assets/about.png"
 
 
 function About () {

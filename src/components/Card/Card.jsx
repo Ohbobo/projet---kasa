@@ -1,4 +1,4 @@
-import "../style/Card.scss"
+import "./Card.scss"
 
 const Card = ({cover, title}) => {
     return (

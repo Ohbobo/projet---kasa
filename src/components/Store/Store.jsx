@@ -1,7 +1,8 @@
-import Card from "./Card";
-import data from "../data/data.json";
+import Card from "../Card/Card";
+import data from "../../data/data.json";
 import { Link } from "react-router-dom";
-import "../style/Store.scss"
+
+import "./Store.scss"
 
 const Store = () => {
 

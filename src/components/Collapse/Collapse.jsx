@@ -1,6 +1,7 @@
 import { useState } from "react"
-import "../style/Collapse.scss"
-import chevron from "../assets/chevron.png"
+import chevron from "../../assets/chevron.png"
+
+import "./Collapse.scss"
 
 const Collapse = ({title, text}) => {
 
