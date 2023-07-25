@@ -6,22 +6,37 @@
     align-items: center;
     margin-top: 20px;
 
-    .navbar__logo {
+    &__logo {
         width: 150px;
     }
 
-    .navbar_links {
-        display: flex;
-        gap: 30px;
-
-        a {
-            font-size: 24px;
-            color: $textColor;
-            font-family: 'Montserrat', sans-serif;
-
-            &:hover {
-                text-decoration: underline;
-            }
+    @include device(mobile){
+        &__logo {
+            width: 120px;
         }
     }
+
+}
+
+.navbar-menu {
+    display: flex;
+    gap: 30px;
+
+    @include device(mobile) {
+        gap: 15px;
+}
+
+    &__link {
+        font-size: 24px;
+        color: $textColor;
+        font-family: 'Montserrat', sans-serif;
+        @include device(mobile) {
+                font-size: 15px;
+        }
+    }
+    
+    &__link:hover {
+        text-decoration: underline;
+    }
+
 }

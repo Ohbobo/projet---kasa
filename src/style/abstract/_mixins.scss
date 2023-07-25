@@ -3,3 +3,19 @@
     justify-content: center;
     align-items: center;
 }
+
+@mixin device ($breakpoints) {
+
+    @if $breakpoints == tablet {
+        @media (max-width: 1240px) {
+            @content;
+        }
+    }
+
+    @if $breakpoints == mobile {
+        @media (max-width: 700px) {
+            @content;
+        }
+    }
+
+}

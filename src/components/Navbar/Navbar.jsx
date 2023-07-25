@@ -10,10 +10,10 @@ function NavBar() {
     return (
         <div className="navbar">
             <Link to="/"><img src={logo} className="navbar__logo" alt="Logo kasa" /></Link>
-            <div className="navbar_links">
+            <div className="navbar-menu">
 
-                <Link to="/">Accueil</Link>
-                <Link to="/about">A propos</Link>
+                <Link className="navbar-menu__link" to="/">Accueil</Link>
+                <Link className="navbar-menu__link" to="/about">A propos</Link>
             </div>
         </div>
     )

@@ -1,0 +1,62 @@
+@use "../../style/abstract" as *;
+
+.article-content {
+    display: flex;
+}
+
+.article-left {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex: 2;
+
+    &__title {
+        color: $textColor;
+        font-size: 36px;
+    }
+
+    &__location {
+        color: $textColor;
+        font-size: 18px;
+    }
+
+    &__tags {
+        display: flex;
+        gap: 10px;
+    }
+    &__tag {
+        background: $textColor;
+        color: white;
+        font-size: 14px;
+        padding: 4px 20px;
+        border-radius: 20px;
+    }
+}
+
+.article-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex: 1;
+
+    &__name {
+        width: 100px;
+        text-align: end;
+        margin-right: 10px;
+        color: $textColor;
+        font-size: 18px;
+    }
+
+    &__img {
+        border-radius: 50%;
+        width: 64px;
+        height: 64px;
+        object-fit: cover;
+    }
+}
+
+.article-collapse {
+    display: flex;
+    gap: 70px;
+    margin-top: 20px;
+}
