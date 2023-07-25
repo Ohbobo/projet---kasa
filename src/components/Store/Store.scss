@@ -1,14 +1,30 @@
 @use "../../style/abstract" as *;
 
 .store-container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-
-    gap: 70px;
-    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 340px);
+    grid-gap: 50px;
+    justify-content: center;
     background: $grayColor;
     border-radius: 20px;
     margin-top: 40px;
-    padding: 40px;
+    padding: 40px 0;
+
+    @include device(tablet) {
+        grid-template-columns: repeat(2, 45%);
+        padding: 30px 0;
+        grid-gap: 30px;
+    }
+
+    @include device(mobile) {
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+        background: transparent;
+        margin-top: 0;
+
+        .card-container {
+            height: 255px;
+        }
+    }
 }

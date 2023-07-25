@@ -18,7 +18,10 @@ body {
     margin: 0 auto;
     max-width: 1240px;
 
+    @include device(tablet){
+        margin: 0 25px;
+    }
     @include device(mobile){
-        margin: 0 10px;
+        margin: 0 15px;
     }
 }

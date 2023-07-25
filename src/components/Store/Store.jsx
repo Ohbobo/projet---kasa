@@ -9,7 +9,7 @@ const Store = () => {
     return (
         <div className="store-container">
             {data.map((item, id) => (
-                <Link key={id} to={`/logement/${item.id}`}>
+                <Link className="card-container" key={id} to={`/logement/${item.id}`}>
                     <Card 
                         cover={item.cover} 
                         title={item.title} 

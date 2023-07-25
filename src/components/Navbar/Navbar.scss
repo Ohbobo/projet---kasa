@@ -30,6 +30,7 @@
         font-size: 24px;
         color: $textColor;
         font-family: 'Montserrat', sans-serif;
+
         @include device(mobile) {
                 font-size: 15px;
         }

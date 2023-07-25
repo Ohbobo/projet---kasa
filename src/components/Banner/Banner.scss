@@ -38,3 +38,27 @@
     }
     
 }
+
+@include device(tablet) {
+    
+    .banner-content {
+        &__title {
+            font-size: 35px;
+        }
+    }
+}
+@include device(mobile) {
+    .banner {
+        height: 110px;
+    }
+    
+    .banner-content {
+        justify-content: flex-start;
+        
+        &__title {
+            font-size: 24px;
+            width: 220px;
+            margin-left: 10px;
+        }
+    }
+}
