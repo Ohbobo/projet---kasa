@@ -1,0 +1,22 @@
+@use "../../style/abstract" as *;
+
+.rate {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+
+    @include device(mobile) {
+        width: auto;
+        align-items: center;
+    }
+    &__star {
+        width: 24px;
+        height: 24px;
+
+        @include device(mobile) {
+            width: 18px;
+            height: 18px;
+        }
+    }
+}
+

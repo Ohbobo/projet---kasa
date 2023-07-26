@@ -4,6 +4,7 @@ import { useState, useEffect, useContext } from "react";
 import { DependenciesProvider } from '../../main';
 import Collapse from "../../components/Collapse/Collapse"
 import Slider from "../../components/Slider/Slider"
+import RatingBar from "../../components/Rate/Rate"
 import Error from "../Error/Error";
 
 import "./Article.scss"
@@ -17,6 +18,7 @@ const AccommodationDetailSheet = () => {
         const flatList = await api.retrieveFlats();
         const findFlat = flatList.find((item) => item.id === id);
         if (findFlat) {
+            findFlat.ratings = parseInt(findFlat.ratings)
             setFlat(findFlat);
         }
     }
@@ -49,9 +51,13 @@ const AccommodationDetailSheet = () => {
                     </div>
 
                     <div className="article-right">
-                        <p className="article-right__name">{flat.host.name}</p>
-                        <img className="article-right__img" src={flat.host.picture} alt="photo propietaire de l'annonce" />
+                        <div className="host-container">
+                            <p className="host-container__name">{flat.host.name}</p>
+                            <img className="host-container__img" src={flat.host.picture} alt="photo propietaire de l'annonce" />
+                        </div>
+                        <RatingBar stars={flat.rating} />
                     </div>
+
                 </div>
                 <div className="article-collapse">
                     <Collapse title="Description" text={flat.description} />
