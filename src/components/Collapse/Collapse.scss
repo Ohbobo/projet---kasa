@@ -1,7 +1,7 @@
 @use "../../style/abstract" as *;
 
 .collapse-container {
-    width: 90%;
+    width: 100%;
     cursor: pointer;
 }
 
@@ -33,5 +33,23 @@
         background: $grayColor;
         padding: 15px;
         border-radius: 5px;
+    }
+}
+
+@include device(mobile) {
+    .collapse-content {
+        height: 35px;
+    
+        &__title {
+            font-size: 14px;
+        }
+    
+        &__img {
+            width: 20px;
+        }
+    
+        &__text {
+            font-size: 14px;
+        }
     }
 }

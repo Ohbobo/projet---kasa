@@ -5,13 +5,12 @@ import logo from "../../assets/logo.png";
 import "./Navbar.scss"
 
 
-function NavBar() {
+const NavBar = () => {
 
     return (
         <div className="navbar">
             <Link to="/"><img src={logo} className="navbar__logo" alt="Logo kasa" /></Link>
             <div className="navbar-menu">
-
                 <Link className="navbar-menu__link" to="/">Accueil</Link>
                 <Link className="navbar-menu__link" to="/about">A propos</Link>
             </div>

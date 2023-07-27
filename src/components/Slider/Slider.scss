@@ -1,3 +1,5 @@
+@use "../../style/abstract" as *;
+
 .slider {
     position: relative;
     width: 100%;
@@ -30,5 +32,25 @@
         bottom: 20px;
         width: 100%;
         text-align: center;
+    }
+}
+
+@include device(mobile) {
+    .slider {
+        height: 255px;
+    
+        &__back {
+            height: 19px;
+            top: 48%;
+        }
+    
+        &__next {
+            height: 19px;
+            top: 48%;
+        }
+    
+        &__counter {
+            display: none;
+        }
     }
 }

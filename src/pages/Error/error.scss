@@ -23,3 +23,26 @@
         text-decoration: underline;
     }
 }
+
+@include device(mobile) {
+    .error-container {
+        height: 60vh;
+        @include flex();
+        flex-direction: column;
+        gap: 50px;
+        margin-top: 30px;
+    
+        &__title{
+            font-size: 96px;
+        }
+    
+        &__paragraphe {
+            font-size: 18px;
+            text-align: center;
+        }
+    
+        & a {
+            font-size: 14px;
+        }
+    }
+}
