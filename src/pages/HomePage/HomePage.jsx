@@ -1,6 +1,6 @@
 import React from "react";
 import Banner from "../../components/Banner/Banner";
-import Gallery from "../../components/Store/Gallery";
+import Gallery from "../../components/Gallery/Gallery";
 
 import banner from "../../assets/banner.png"
 

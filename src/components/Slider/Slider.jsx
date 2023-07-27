@@ -23,12 +23,12 @@ const Slider = ({images}) => {
     return (
         <div className="slider">
            
-            <img className="slider__back" 
+            <img className="slider__back slider__arrow" 
             src={backArrow} 
             alt="fléche précedente carrousel" 
             onClick={previousImage}/>
 
-            <img className="slider__next" 
+            <img className="slider__next slider__arrow" 
             src={nextArrow} 
             alt="fléche suivante carrousel" 
             onClick={nextImage}/>

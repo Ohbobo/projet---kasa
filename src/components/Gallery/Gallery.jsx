@@ -5,11 +5,10 @@ import { Link } from "react-router-dom";
 import "./Gallery.scss"
 
 const Gallery = () => {
-
     return (
         <div className="store-container">
-            {data.map((item, id) => (
-                <Link className="card-container" key={id} to={`/logement/${item.id}`}>
+            {data.map((item) => (
+                <Link className="card-container" key={item.id} to={`/logement/${item.id}`}>
                     <Card 
                         cover={item.cover} 
                         title={item.title} 
