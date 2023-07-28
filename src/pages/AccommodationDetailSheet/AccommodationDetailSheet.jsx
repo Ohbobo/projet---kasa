@@ -2,12 +2,13 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect, useContext } from "react";
 
 import { DependenciesProvider } from '../../main';
-import Collapse from "../../components/Collapse/Collapse"
-import Slider from "../../components/Slider/Slider"
-import RatingBar from "../../components/Rate/Rate"
+import Collapse from "../../components/Collapse/Collapse";
+import Slider from "../../components/Slider/Slider";
+import RatingBar from "../../components/Rate/Rate";
+import Tags from "../../components/Tags/Tags";
 import Error from "../Error/Error";
 
-import "./Article.scss"
+import "./AccommodationDetailSheet.scss"
 
 const AccommodationDetailSheet = () => {
     const { api } = useContext(DependenciesProvider);
@@ -43,11 +44,7 @@ const AccommodationDetailSheet = () => {
                     <div className="article-left">
                         <h2 className="article-left__title">{flat.title}</h2>
                         <p className="article-left__location">{flat.location}</p>
-                        <div className="article-left__tags">
-                            {allTags.map((tag, index) => (
-                                <p className="article-left__tag" key={index}>{tag}</p>
-                            ))}
-                        </div>
+                        <Tags tags={allTags} />
                     </div>
 
                     <div className="article-right">

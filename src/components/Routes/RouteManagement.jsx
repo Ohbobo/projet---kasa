@@ -2,7 +2,7 @@ import React from "react"
 import { Routes, Route } from "react-router-dom"
 import HomePage from "../../pages/HomePage/HomePage"
 import About from "../../pages/About/About"
-import AccommodationDetailSheet from "../../pages/AccommodationDetailSheet/Article"
+import AccommodationDetailSheet from "../../pages/AccommodationDetailSheet/AccommodationDetailSheet"
 import Error from "../../pages/Error/Error"
 
 const Router = () => {

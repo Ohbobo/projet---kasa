@@ -1,5 +1,10 @@
 @use "../../style/abstract" as *;
 
+.about-banner {
+    margin-top: 35px;
+    height: 225px;
+}
+
 .faq-container {
     display: flex;
     flex-direction: column;

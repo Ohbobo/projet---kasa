@@ -24,7 +24,7 @@
 
     @include device(mobile) {
         gap: 15px;
-}
+    }
 
     &__link {
         font-size: 24px;
@@ -40,7 +40,7 @@
         text-decoration: underline;
     }
     
-    &__link.active {
+    &__link-active {
         text-decoration: underline;
     }
 

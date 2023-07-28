@@ -10,14 +10,16 @@ import aboutImage from "../../assets/about.png"
 function About () {
 
     return (
-        <>
-        <Banner text="" img={aboutImage} />
+        <section className="about">
+          <div className="about-banner">
+            <Banner text="" img={aboutImage} />
+          </div>
         <div className="faq-container">
           {aboutData.map((item, id) => (
             <Collapse key={id} title={item.title} text={item.text} />
           ))}
         </div>
-        </>
+        </section>
       );
 }
 

@@ -1,0 +1,9 @@
+@use "../../style/abstract" as *;
+
+.home-banner {
+    height: 225px;
+
+    @include device(mobile) {
+        height: 111px;
+    }
+}
