@@ -1,6 +1,7 @@
 @use "../../style/abstract" as *;
 
 .navbar {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -8,14 +9,11 @@
 
     &__logo {
         width: 150px;
-    }
 
-    @include device(mobile){
-        &__logo {
-            width: 120px;
+        @include device(mobile){
+                width: 120px;
         }
     }
-
 }
 
 .navbar-menu {

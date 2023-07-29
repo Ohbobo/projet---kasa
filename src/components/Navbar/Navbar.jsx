@@ -1,11 +1,12 @@
-import { Link } from "react-router-dom";
-import { useContext } from "react";
-import { LinkContext } from "../LinkContext/linkContext";
+import { Link, useLocation } from "react-router-dom";
+import { useState } from "react";
 import logo from "../../assets/logo.png";
 import "./Navbar.scss";
 
 const NavBar = () => {
-    const {underlineLink, resetUnderlineLink} = useContext(LinkContext);
+    const location = useLocation();
+
+    const [underlineLink, setUnderlineLink] = useState("/");
 
     const handleClick = (link) => {
         setUnderlineLink(link);
@@ -19,7 +20,7 @@ const NavBar = () => {
                     src={logo} 
                     className="navbar__logo" 
                     alt="Logo kasa" 
-                    onClick={() => resetUnderlineLink}
+                    onClick={() => handleClick("/")}
                     />
             </Link>
 
@@ -27,8 +28,7 @@ const NavBar = () => {
 
                 <Link
                     className={`navbar-menu__link ${
-                        underlineLink === "/" ? "navbar-menu__link-active" : ""
-                    }`}
+                        (location.pathname ==="/" && underlineLink === "/") ? "navbar-menu__link-active" : ""}`}
                     to="/"
                     onClick={() => handleClick("/")}
                 >
@@ -37,8 +37,7 @@ const NavBar = () => {
 
                 <Link
                     className={`navbar-menu__link ${
-                        underlineLink === "/about" ? "navbar-menu__link-active" : ""
-                    }`}
+                        (location.pathname ==="/about" && underlineLink === "/about") ? "navbar-menu__link-active" : ""}`}
                     to="/about"
                     onClick={() => handleClick("/about")}
                 >

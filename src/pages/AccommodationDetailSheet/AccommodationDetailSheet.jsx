@@ -37,7 +37,7 @@ const AccommodationDetailSheet = () => {
     const allEquipments = flat && flat.equipments;
 
     return (
-        <div>
+        <div className="article-container">
             <div className="article">
                 <Slider images = {allCarrouselPictures} />
                 <div className="article-content">

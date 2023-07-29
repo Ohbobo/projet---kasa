@@ -1,5 +1,14 @@
 @use "../../style/abstract" as *;
 
+.article-container {
+    width: 100%;
+}
+
+.article {
+    margin-bottom: 40px;
+    width: 100%;
+}
+
 .article-content {
     display: flex;
 }
@@ -31,7 +40,6 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    flex: 1;
 
     &__name {
         width: 100px;
@@ -79,6 +87,7 @@
     .article-right {
         display: flex;
         flex-direction: row-reverse;
+        justify-content: space-between;
         margin-top: 20px;
     }
 

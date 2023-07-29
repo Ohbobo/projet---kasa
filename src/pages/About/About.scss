@@ -1,18 +1,20 @@
 @use "../../style/abstract" as *;
 
+.about {
+    width: 100%;
+}
+
 .about-banner {
     margin-top: 35px;
     height: 225px;
 }
 
 .faq-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include flexColumn;
     gap: 30px;
     margin-top: 40px;
     padding: 0 30px 0 30px;
+    margin-bottom: 45px;
 
     @include device(mobile) {
         margin-top: 20px;

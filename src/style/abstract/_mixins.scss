@@ -4,6 +4,13 @@
     align-items: center;
 }
 
+@mixin flexColumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 @mixin device ($breakpoints) {
 
     @if $breakpoints == tablet {
