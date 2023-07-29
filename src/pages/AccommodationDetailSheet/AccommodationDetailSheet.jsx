@@ -15,12 +15,25 @@ const AccommodationDetailSheet = () => {
     const { id } = useParams();
 
     const [flat, setFlat] = useState();
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState();
+
     const fetchData = async () => {
-        const flatList = await api.retrieveFlats();
-        const findFlat = flatList.find((item) => item.id === id);
-        if (findFlat) {
-            findFlat.ratings = parseInt(findFlat.ratings)
-            setFlat(findFlat);
+        try {
+            const flatList = await api.retrieveFlats();
+
+            const findFlat = flatList.find((item) => item.id === id);
+            if (findFlat) {
+                findFlat.ratings = parseInt(findFlat.ratings)
+                setFlat(findFlat);
+                setLoading(false);
+            } else {
+                setError("Données non trouvées");
+                setLoading(false);
+            }
+        } catch (err) {
+            setError("Erreur lors du chargement des données");
+            setLoading(false);
         }
     }
 
@@ -28,8 +41,12 @@ const AccommodationDetailSheet = () => {
         fetchData();
     }, [id]);
 
-    if (!flat) {
-        return <div>Loading...</div>
+    if (loading) {
+        return <div className="loading">Loading...</div>
+    }
+
+    if(error) {
+        return <Error />
     }
 
     const allCarrouselPictures = flat && flat.pictures;
