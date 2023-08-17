@@ -1,11 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
-
 import { BrowserRouter } from 'react-router-dom'
-import { FakeKasaAPI, KasaAPI } from './lib/api.js';
-
-export const DependenciesProvider = React.createContext();
+import { FakeKasaAPI } from './lib/api.js';
+import { DependenciesProvider } from './context/context.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <BrowserRouter>

@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect, useContext } from "react";
+import { useDependencies } from "../../context/context";
 
-import { DependenciesProvider } from '../../main';
 import Collapse from "../../components/Collapse/Collapse";
 import Slider from "../../components/Slider/Slider";
 import RatingBar from "../../components/Rate/Rate";
@@ -11,7 +11,7 @@ import Error from "../Error/Error";
 import "./AccommodationDetailSheet.scss"
 
 const AccommodationDetailSheet = () => {
-    const { api } = useContext(DependenciesProvider);
+    const { api } = useDependencies();
     const { id } = useParams();
 
     const [flat, setFlat] = useState();

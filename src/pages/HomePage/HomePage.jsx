@@ -5,10 +5,7 @@ import banner from "../../assets/banner.png"
 
 import "./Homepage.scss"
 
-
-
 const HomePage =  () => {
-
     return (
         <div>
             <div className="home-banner">

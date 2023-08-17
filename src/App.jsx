@@ -1,5 +1,5 @@
 import NavBar from "./components//Navbar/Navbar"
-import Router from "./components/Routes/RouteManagement"
+import Router from "./routes/Routes/RouteManagement"
 import Footer from "./components/Footer/Footer"
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop"
 

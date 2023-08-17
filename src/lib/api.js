@@ -6,9 +6,9 @@ export class FakeKasaAPI {
     }
 }
 
-export class KasaAPI {
-    async retrieveFlats() {
-        const response = await fetch('http://localhost:5500/src/data/data.json');
-        return await response.json();
-    }
-}
+// export class KasaAPI {
+//     async retrieveFlats() {
+//         const response = await fetch('http://localhost:5500/src/data/data.json');
+//         return await response.json();
+//     }
+// }

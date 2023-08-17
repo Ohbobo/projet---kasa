@@ -6,9 +6,7 @@ import "./About.scss"
 
 import aboutImage from "../../assets/about.png"
 
-
-function About () {
-
+const About = () => {
     return (
         <section className="about">
           <div className="about-banner">
